@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1></h1>
+
+  <form action="">
+    <button type="button" id="bt1">Boton 1</button>
+  <button type="button" id="bt1">Boton 2</button>
+  <button type="button" id="bt1">Boton 3</button>
+
+  <select name="lsCarreras" id="lsCarreras">
+    <option value="1">Ingenieria de Software</option>
+    <option value="1">Diseño Grafico Digital</option>
+    <option value="1">Administracion Industrial</option>
+  </select>
+
+    <!-- 
+    EVENTOS
+    keypress    : pulsacion (2 acciones)
+    keydows     : mantener abajo/presionado
+    keyup       : detecta el boton fue liberado
+   -->
+
+   <input type="text" id="caja1" placeholder="Escribe aqui">
+   <input type="text" id="caja2" placeholder="Detectar codigo de boton">
+  </form>
+
+  <script>
+    function $(identificador){
+      //Retornar una refencia a objeto/componente cualquiera
+      return document.querySelector(identificador)
+    }
+
+    //El codigo NO estara disponible hasta que el sitio cargue al 100%
+    $("#bt1").addEventLister("click", () => {
+      console.log("Boton 1 activado")
+    })
+
+    $("#bt2").addEventLister("click", () => {
+      console.log("Boton 2 activado")
+    })
+
+    $("#bt3").addEventLister("click", () => {
+      console.log("Boton 3 activado")
+    })
+
+    $("#lsCarreras").addEventLister("change", () => {
+      console.log($("#lsCarreras").value)
+    })
+
+    $("#caja1").addEventLister("keyup", () => {
+      $("h1").innerHTML = $("#caja1").value
+    })
+
+    //La funcion de fecha NOS ENVIARA datos
+    $("#caja2").addEventLister("kaypress", (event) => {
+      //console.log(event)
+      if (event.keyCode == 13){
+        conosle.log("Pulsaste ENTER")
+      }
+    })
+
+  </script>
+
+</body>
+</html>

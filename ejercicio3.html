@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="saludar"  type="button">Saludar</button>
+<button id="bt1" type="button">Mensaje 1 </button>
+<button id="bt2" type="button">Mensaje 2 </button>
+<button id="bt3" type="button">Mensaje 3 </button>
+<button id="bt4" type="button">Mensaje 4 </button>
+<button id="bt5" type="button">Mensaje 5 </button>
+
+<!-- multiplicar parrafos -->
+<p>Senati</p>
+<p>Senati</p>
+<p>Senati</p> 
+<!-- generar datos en lina x 5 -->
+<button id="bt1" type="button">Mensaje 1</button>
+<button id="bt2" type="button">Mensaje 2</button>
+<button id="bt3" type="button">Mensaje 3</button>
+<button id="bt4" type="button">Mensaje 4</button>
+<button id="bt5" type="button">Mensaje 5</button>
+<!-- Para agregar calse coloque punto -->
+<p class="importante titulo"></p>
+
+<!-- Agregar lista * 5 -->
+ul,<menu>
+  <li></li>
+  <a href="">Opcion 1</a>
+  <li></li>
+  <a href="">Opcion 2</a>
+  <li></li>
+  <a href="">Opcion 3</a>
+  <li></li>
+  <a href="">Opcion 4</a>
+  <li></li>
+  <a href="">Opcion 5</a>
+</menu>
+<!-- agregar botones  -->
+<button class="galeria" tyoe="button" id="bt1">Mostrar1</button>
+<button class="galeria" tyoe="button" id="bt2">Mostrar2</button>
+<button class="galeria" tyoe="button" id="bt3">Mostrar3</button>
+<button class="galeria" tyoe="button" id="bt4">Mostrar4</button>
+<button class="galeria" tyoe="button" id="bt5">Mostrar5</button>
+
+  <script>
+    //Obejeto que me permita manipular los 5 botones
+    //Referencia a multiples objeto querySelector
+    //Referencia a multiple objetos querySelectorAll
+    const listaBotones =document.querySelectorAll(".galeria")
+    listaBotones.forEach(boton => {
+      boton.addEventListener("click",Saludar)
+      
+    });
+
+    //Eventos (clicks)
+    const boton = document.querySelector("#saludar")
+    boton.addEventListener("click", Saludar)
+  function Saludar(){
+    
+  }
+  
+  </script>
+
+</body>
+</html>

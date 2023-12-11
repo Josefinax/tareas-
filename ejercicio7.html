@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* Funcion autoejecutada */
+    /* Se crea, se ejecuta, se destruye */
+    (function (){
+      console.log("Hola soy Abi")
+    })();
+
+    /* Function autoejecutable con parametros */
+    (function (carrera){
+      console.log(`La carrera que estudio es ${carrea}`)
+    })("Ingeniera del Woftware");
+
+    (function (n1, n2){
+      let suma = parseInt(n1) + parseInt(n2)
+      console.log(`El resultado es ${suma}`)
+    })("4" + "5");
+
+  </script>
+</body>
+</html>
+

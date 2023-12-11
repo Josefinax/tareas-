@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul id="enlaces">
+  </ul>
+
+  <button id="consultar" type="button">Consultar datos</button>
+
+  <script>
+
+    const enlaces = document.querySelector("#enlaces")
+    const boton = document.querySelector("#consultar")
+
+    boton.addEventListener("click", () => {
+
+      //¿Como realizo una peticion > respuesta asíncrona?
+      //fetch()   : Comunicacion, permisos, URL
+      //then()    : datos entrada = text(), bloc(), json()
+      //then      : proceso
+      //catch     : excepciones
+
+      fetch(`https://swapi.dev/api/films/2/`)
+        .then(datos => datos.json())
+        .then(respuesta => { 
+          const peliculas = respuesta.films
+          console.log(peliculas)
+
+          let indice = 1;
+          peliculas.forEach(pelicula => {
+            enlaces.innerHTML +=`
+              <li>
+                <a href='${pelicula}' target='_blank'>pelicula ${indice}</a>
+              </li
+            `;
+            indice++;
+          });
+        })
+        .catch(e => { console.error(e) })
+    });
+  </script>
+</body>
+</html>
